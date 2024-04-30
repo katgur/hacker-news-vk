@@ -3,7 +3,8 @@
 # dependencies
 /node_modules
 /.pnp
-.pnp.js
+.pnp.cjs
+.pnp.loader.mjs
 /.yarn
 
 # testing
@@ -11,6 +12,7 @@
 
 # production
 /build
+build.zip
 
 # misc
 .DS_Store
