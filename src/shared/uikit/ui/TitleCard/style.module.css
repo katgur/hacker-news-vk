@@ -1,0 +1,9 @@
+.title {
+    /* Класс .vkuiTypography--normalize сбрасывает margin */
+    margin-bottom: 1rem !important;
+}
+
+.headline {
+    /* Класс .vkuiTypography--normalize сбрасывает margin */
+    margin-bottom: 1.5rem !important;
+}

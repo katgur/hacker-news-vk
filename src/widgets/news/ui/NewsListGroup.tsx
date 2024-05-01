@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import NewsPreviewView from "entities/news/ui/NewsPreviewView";
+import { Button, Div, Group } from "@vkontakte/vkui";
+import NewsPreviewCell from "entities/news/ui/NewsPreviewCell";
 import { InfiniteScrollPagination } from "shared/pagination";
 import { getAllRecentNews } from "../api";
 
-function NewsList() {
+function NewsListGroup() {
   const { isPending, error, data, refetch } = useQuery({
     queryKey: ["news"],
     queryFn: () => getAllRecentNews(),
@@ -24,19 +25,20 @@ function NewsList() {
   }
 
   return (
-    <section>
-      <h2>Recent News</h2>
-      <button type="button" onClick={() => refetch()}>
-        Refresh
-      </button>
+    <Group>
+      <Div>
+        <Button type="button" onClick={() => refetch()}>
+          Refresh
+        </Button>
+      </Div>
       <InfiniteScrollPagination
         skip={10}
         total={100}
         items={data}
-        renderView={(id) => <NewsPreviewView id={id} />}
+        renderView={(id) => <NewsPreviewCell id={id} />}
       />
-    </section>
+    </Group>
   );
 }
 
-export default NewsList;
+export default NewsListGroup;

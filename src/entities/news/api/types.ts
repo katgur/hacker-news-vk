@@ -8,6 +8,7 @@ export interface GetNewsDetailsByIdResponse {
   kids?: number[];
   url: string;
   descendants: number;
+  score: number;
 }
 
 export function isGetNewsDetailsByIdResponse(
@@ -19,6 +20,7 @@ export function isGetNewsDetailsByIdResponse(
     isString(response.title) &&
     isString(response.by) &&
     isNumber(response.time) &&
-    (response.kids === undefined || isNumberArray(response.kids))
+    (response.kids === undefined || isNumberArray(response.kids)) &&
+    isNumber(response.score)
   );
 }

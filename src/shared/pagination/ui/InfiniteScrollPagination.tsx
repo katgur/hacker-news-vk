@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
+import { Div } from "@vkontakte/vkui";
 import { PaginationProps } from "../types";
+import style from "./style.module.css";
 
 function InfiniteScrollPagination({
   skip,
@@ -33,16 +35,18 @@ function InfiniteScrollPagination({
   }, [targetRef.current]);
 
   return (
-    <div>
-      <ul>
+    <Div>
+      <ul className={style.list}>
         {items.slice(0, limit - 1).map((id) => (
-          <li key={id}>{renderView(id)}</li>
+          <li key={id} className={style.item}>
+            {renderView(id)}
+          </li>
         ))}
-        <li key={items[limit - 1]} ref={targetRef}>
+        <li key={items[limit - 1]} ref={targetRef} className={style.item}>
           {renderView(items[limit - 1])}
         </li>
       </ul>
-    </div>
+    </Div>
   );
 }
 

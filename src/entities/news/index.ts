@@ -1,4 +1,3 @@
-import NewsDetails from "./ui/NewsDetailsView";
-import NewsPreviewView from "./ui/NewsPreviewView";
+import NewsPreviewCell from "./ui/NewsPreviewCell";
 
-export { NewsDetails, NewsPreviewView };
+export { NewsPreviewCell };

@@ -1,4 +1,3 @@
-import CommentView, { CommentProps } from "./ui";
+import CommentsGroup from "./ui/CommentsGroup";
 
-export type { CommentProps as Comment };
-export { CommentView };
+export { CommentsGroup };

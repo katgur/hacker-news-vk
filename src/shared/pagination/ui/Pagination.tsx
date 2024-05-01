@@ -1,23 +1,28 @@
 import { useState } from "react";
+import { Button, Div } from "@vkontakte/vkui";
 import { PaginationProps } from "../types";
+import style from "./style.module.css";
 
 function Pagination({ skip, total, items, renderView }: PaginationProps) {
   const [limit, setLimit] = useState<number>(Math.min(total, skip));
   return (
-    <div>
-      <ul>
+    <Div>
+      <ul className={style.list}>
         {items.slice(0, limit).map((id) => (
-          <li key={id}>{renderView(id)}</li>
+          <li key={id} className={style.item}>
+            {renderView(id)}
+          </li>
         ))}
       </ul>
-      <button
-        type="button"
-        onClick={() => setLimit(Math.min(total, limit + skip))}
-        disabled={limit >= total}
-      >
-        Load more
-      </button>
-    </div>
+      {limit < total && (
+        <Button
+          type="button"
+          onClick={() => setLimit(Math.min(total, limit + skip))}
+        >
+          Load more
+        </Button>
+      )}
+    </Div>
   );
 }
 

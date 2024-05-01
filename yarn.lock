@@ -1883,6 +1883,44 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@floating-ui/core@npm:^1.0.0":
+  version: 1.6.1
+  resolution: "@floating-ui/core@npm:1.6.1"
+  dependencies:
+    "@floating-ui/utils": "npm:^0.2.0"
+  checksum: 10c0/7d78b3788d438807d3c1a52477ee1693a29b8a4416dd6e13761427925d9fba1d45c849527752d8fd9776842182d919fddf7ecbc34f3bf2de3bafa1717619a56f
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^1.0.0":
+  version: 1.6.4
+  resolution: "@floating-ui/dom@npm:1.6.4"
+  dependencies:
+    "@floating-ui/core": "npm:^1.0.0"
+    "@floating-ui/utils": "npm:^0.2.0"
+  checksum: 10c0/cee0b9e6efc1c6d978ec580c770078fdf416016fb03f3dd99630f7f32d0422722e608471fbc7578be86c783ad1c1e448c5fa5b9fdec889dfbf4b695f208730fd
+  languageName: node
+  linkType: hard
+
+"@floating-ui/react-dom@npm:^2.0.8":
+  version: 2.0.9
+  resolution: "@floating-ui/react-dom@npm:2.0.9"
+  dependencies:
+    "@floating-ui/dom": "npm:^1.0.0"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10c0/d8cd1fb2b8a5012ca692d6f677a0af923ef81131f69accea8ce8b5413202ab4c3c79e6eda1446f4dad06a2dfd596ece748c562ba28c289678a856755db4f528f
+  languageName: node
+  linkType: hard
+
+"@floating-ui/utils@npm:^0.2.0":
+  version: 0.2.2
+  resolution: "@floating-ui/utils@npm:0.2.2"
+  checksum: 10c0/b2becdcafdf395af1641348da0031ff1eaad2bc60c22e14bd3abad4acfe2c8401e03097173d89a2f646a99b75819a78ef21ebb2572cab0042a56dd654b0065cd
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.14":
   version: 0.11.14
   resolution: "@humanwhocodes/config-array@npm:0.11.14"
@@ -2360,6 +2398,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@remix-run/router@npm:^1.13.0":
+  version: 1.16.0
+  resolution: "@remix-run/router@npm:1.16.0"
+  checksum: 10c0/234e66b4d7266aff6d111a43f5560f00ffdc91de0b5cd447f1fdf1de1a8b3a6ac326eb52302356e23b095e71a8f4da914e40239af5f121de2ec2994f101b8db0
+  languageName: node
+  linkType: hard
+
 "@rollup/plugin-babel@npm:^5.2.0":
   version: 5.3.1
   resolution: "@rollup/plugin-babel@npm:5.3.1"
@@ -2590,6 +2635,15 @@ __metadata:
     "@svgr/plugin-svgo": "npm:^5.5.0"
     loader-utils: "npm:^2.0.0"
   checksum: 10c0/0313712a1892f387d8c425652239dd635269241b18e7e6f9aad6a339cbe887ebec813d146df23407229384ac5e9d6527f3571aa2fc9dcb30e32006c9eb918663
+  languageName: node
+  linkType: hard
+
+"@swc/helpers@npm:^0.5.0, @swc/helpers@npm:^0.5.1, @swc/helpers@npm:^0.5.10, @swc/helpers@npm:^0.5.3":
+  version: 0.5.11
+  resolution: "@swc/helpers@npm:0.5.11"
+  dependencies:
+    tslib: "npm:^2.4.0"
+  checksum: 10c0/7d1987ee6b887277d373a9be8c445cd2259c3258c08b16908c06864121fd8eac8bb89b179c91b6c5395f38194a903b5772575947c7eb3ca23285152cb0f66caa
   languageName: node
   linkType: hard
 
@@ -3288,6 +3342,108 @@ __metadata:
   version: 1.2.0
   resolution: "@ungap/structured-clone@npm:1.2.0"
   checksum: 10c0/8209c937cb39119f44eb63cf90c0b73e7c754209a6411c707be08e50e29ee81356dca1a848a405c8bdeebfe2f5e4f831ad310ae1689eeef65e7445c090c6657d
+  languageName: node
+  linkType: hard
+
+"@vkontakte/icons-sprite@npm:2.0.0":
+  version: 2.0.0
+  resolution: "@vkontakte/icons-sprite@npm:2.0.0"
+  dependencies:
+    "@swc/helpers": "npm:^0.5.1"
+  peerDependencies:
+    react: ^16.9.34 || ^17 || ^18
+  checksum: 10c0/2359dc4a32d37dd80ed1df691bf6474bd842bb16819a45425512a76315f5a7131f0dba6c274684f113c98c51147f09a55116ba98bc02f136f7f75587667e8f83
+  languageName: node
+  linkType: hard
+
+"@vkontakte/icons-sprite@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@vkontakte/icons-sprite@npm:2.1.0"
+  dependencies:
+    "@swc/helpers": "npm:^0.5.10"
+  peerDependencies:
+    react: ^16.9.34 || ^17 || ^18
+  checksum: 10c0/5f812e66a8ee83723a3fdf31d189606fe66c783dab39bca83f338ec004a168b2ad2cd74714d47a3976275b679b06d4432b7e7da83789bab9e4c60640a800faff
+  languageName: node
+  linkType: hard
+
+"@vkontakte/icons@npm:^2.113.0":
+  version: 2.113.0
+  resolution: "@vkontakte/icons@npm:2.113.0"
+  dependencies:
+    "@vkontakte/icons-sprite": "npm:2.1.0"
+  peerDependencies:
+    react: ^16.9.34 || ^17 || ^18
+  checksum: 10c0/17e690b1d32cfe47fb8fa0892e3e29d63fa1fe2c960b75815e97503d510085ff18486e16820512ce4cdbea7c136ad239871e56abcc552ba1a4036c93fef7455e
+  languageName: node
+  linkType: hard
+
+"@vkontakte/icons@npm:^2.62.0":
+  version: 2.112.0
+  resolution: "@vkontakte/icons@npm:2.112.0"
+  dependencies:
+    "@vkontakte/icons-sprite": "npm:2.0.0"
+  peerDependencies:
+    react: ^16.9.34 || ^17 || ^18
+  checksum: 10c0/124ccb321bd28c28d10123b6793515ebab2cfa7e88cc8bb078eb138a7aa300d59d246855c91477db15a29963948ba520fda5978f107578daead5911f393df8ce
+  languageName: node
+  linkType: hard
+
+"@vkontakte/vk-bridge@npm:^2.14.1":
+  version: 2.14.1
+  resolution: "@vkontakte/vk-bridge@npm:2.14.1"
+  checksum: 10c0/a3e5330752a30d155c5b631eefdba4ba8b59189e3fec09b4e3fdfbe333f9e49ffaf0b343c24920cf1765cb06cbe85ef74936a88fa2a80f137a1a3cac43bb54c1
+  languageName: node
+  linkType: hard
+
+"@vkontakte/vk-mini-apps-router@npm:^1.4.3":
+  version: 1.4.3
+  resolution: "@vkontakte/vk-mini-apps-router@npm:1.4.3"
+  dependencies:
+    "@remix-run/router": "npm:^1.13.0"
+  peerDependencies:
+    "@vkontakte/vk-bridge": ^2.7.2
+    "@vkontakte/vkui": ^5.1.0 || ^6.0.0
+  checksum: 10c0/9b5e82fe9d62609ce7ada07cfb28e0ce2c2324317e4985970831627d53372a1c8e67650ac9be3584101aeac809dc757a7df394c698f839ce10b1447fab4ff3e1
+  languageName: node
+  linkType: hard
+
+"@vkontakte/vkjs@npm:^1.1.1":
+  version: 1.1.2
+  resolution: "@vkontakte/vkjs@npm:1.1.2"
+  dependencies:
+    "@swc/helpers": "npm:^0.5.0"
+  checksum: 10c0/9a7df4f4a001f5ea65009d2b103ef1032a2a65899ffa20bd2890407534ad9eec00525ccde027d047d0a9f1801d0b6f6f2612c4bb1db604addc581830c26d5210
+  languageName: node
+  linkType: hard
+
+"@vkontakte/vkui-floating-ui@npm:^0.1.2":
+  version: 0.1.5
+  resolution: "@vkontakte/vkui-floating-ui@npm:0.1.5"
+  dependencies:
+    "@floating-ui/react-dom": "npm:^2.0.8"
+    "@swc/helpers": "npm:^0.5.3"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 10c0/ab814137f0344b1162e52437dc796188cc4991e9b2bc58745e82d7286c96770bc568003561c6219a23ece970bc76727c00f873aacf08d964d6ec3b2693df57e1
+  languageName: node
+  linkType: hard
+
+"@vkontakte/vkui@npm:^6.0.2":
+  version: 6.0.2
+  resolution: "@vkontakte/vkui@npm:6.0.2"
+  dependencies:
+    "@swc/helpers": "npm:^0.5.3"
+    "@vkontakte/icons": "npm:^2.62.0"
+    "@vkontakte/vkjs": "npm:^1.1.1"
+    "@vkontakte/vkui-floating-ui": "npm:^0.1.2"
+    dayjs: "npm:^1.11.10"
+    mitt: "npm:^3.0.1"
+  peerDependencies:
+    react: ^18.2.0
+    react-dom: ^18.2.0
+  checksum: 10c0/5b2a5be77c9f22c1fdcfc10d13c98b87cde040d665426bdb60eed5be6f4dbb10f138c254c076b795f62e4849248e93ac3cfb59794989d51b6883523f903a16c8
   languageName: node
   linkType: hard
 
@@ -4815,6 +4971,10 @@ __metadata:
     "@typescript-eslint/eslint-plugin": "npm:^7.8.0"
     "@typescript-eslint/parser": "npm:^7.8.0"
     "@typescript-eslint/utils": "npm:^7.8.0"
+    "@vkontakte/icons": "npm:^2.113.0"
+    "@vkontakte/vk-bridge": "npm:^2.14.1"
+    "@vkontakte/vk-mini-apps-router": "npm:^1.4.3"
+    "@vkontakte/vkui": "npm:^6.0.2"
     eslint: "npm:^8.57.0"
     eslint-plugin-import: "npm:^2.29.1"
     eslint-plugin-prettier: "npm:^5.1.3"
@@ -5170,6 +5330,13 @@ __metadata:
     es-errors: "npm:^1.3.0"
     is-data-view: "npm:^1.0.1"
   checksum: 10c0/21b0d2e53fd6e20cc4257c873bf6d36d77bd6185624b84076c0a1ddaa757b49aaf076254006341d35568e89f52eecd1ccb1a502cfb620f2beca04f48a6a62a8f
+  languageName: node
+  linkType: hard
+
+"dayjs@npm:^1.11.10":
+  version: 1.11.11
+  resolution: "dayjs@npm:1.11.11"
+  checksum: 10c0/0131d10516b9945f05a57e13f4af49a6814de5573a494824e103131a3bbe4cc470b1aefe8e17e51f9a478a22cd116084be1ee5725cedb66ec4c3f9091202dc4b
   languageName: node
   linkType: hard
 
@@ -9153,6 +9320,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mitt@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "mitt@npm:3.0.1"
+  checksum: 10c0/3ab4fdecf3be8c5255536faa07064d05caa3dd332bd318ff02e04621f7b3069ca1de9106cfe8e7ced675abfc2bec2ce4c4ef321c4a1bb1fb29df8ae090741913
+  languageName: node
+  linkType: hard
+
 "mkdirp@npm:^1.0.3":
   version: 1.0.4
   resolution: "mkdirp@npm:1.0.4"
@@ -12583,7 +12757,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.0.3, tslib@npm:^2.6.2":
+"tslib@npm:^2.0.3, tslib@npm:^2.4.0, tslib@npm:^2.6.2":
   version: 2.6.2
   resolution: "tslib@npm:2.6.2"
   checksum: 10c0/e03a8a4271152c8b26604ed45535954c0a45296e32445b4b87f8a5abdb2421f40b59b4ca437c4346af0f28179780d604094eb64546bee2019d903d01c6c19bdb
