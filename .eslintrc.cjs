@@ -10,7 +10,12 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   plugins: ["react", "prettier"],
   rules: {
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "react/prop-types": 0,
   },
 };
