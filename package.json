@@ -6,12 +6,14 @@
     "dev": "react-scripts start",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "build": "tsc && react-scripts build",
-    "start": "npm run build && serve -s build"
+    "start": "npm run build && serve -s build",
+    "deploy": "vk-miniapps-deploy"
   },
   "dependencies": {
     "@tanstack/react-query": "^5.32.1",
     "@vkontakte/icons": "^2.113.0",
     "@vkontakte/vk-bridge": "^2.14.1",
+    "@vkontakte/vk-bridge-react": "^1.0.1",
     "@vkontakte/vk-mini-apps-router": "^1.4.3",
     "@vkontakte/vkui": "^6.0.2",
     "react": "^18.3.1",
@@ -26,6 +28,7 @@
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "@typescript-eslint/utils": "^7.8.0",
+    "@vkontakte/vk-miniapps-deploy": "^0.1.7",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-prettier": "^5.1.3",

@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { RouterLink, useHref } from "@vkontakte/vk-mini-apps-router";
+import { RouterLink } from "@vkontakte/vk-mini-apps-router";
 import { SimpleCell, Text } from "@vkontakte/vkui";
 import { mapTimeToDate } from "shared/mappers";
 import { getNewsDetailsById } from "../api";
@@ -14,7 +14,6 @@ function NewsPreviewCell({ id }: NewsPreviewProps) {
     queryFn: () => getNewsDetailsById(id),
     refetchOnWindowFocus: false,
   });
-  const href = useHref(id + "");
 
   if (isPending) {
     return <Text>Loading...</Text>;
@@ -30,7 +29,7 @@ function NewsPreviewCell({ id }: NewsPreviewProps) {
   }
 
   return (
-    <RouterLink to={href}>
+    <RouterLink to={`/${id}`}>
       <SimpleCell
         subhead={`${data.by} ${mapTimeToDate(data.time)}`}
         after={data.score}
