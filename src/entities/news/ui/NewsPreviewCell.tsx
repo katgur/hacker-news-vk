@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { RouterLink, useHref } from "@vkontakte/vk-mini-apps-router";
-import { SimpleCell } from "@vkontakte/vkui";
+import { SimpleCell, Text } from "@vkontakte/vkui";
 import { mapTimeToDate } from "shared/mappers";
 import { getNewsDetailsById } from "../api";
 
@@ -17,11 +17,12 @@ function NewsPreviewCell({ id }: NewsPreviewProps) {
   const href = useHref(id + "");
 
   if (isPending) {
-    return <p>Loading...</p>;
+    return <Text>Loading...</Text>;
   }
 
   if (error) {
-    return <p>{error.message}</p>;
+    console.error(error);
+    return <Text>Error while fetching news details</Text>;
   }
 
   if (!data) {

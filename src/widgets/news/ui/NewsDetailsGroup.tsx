@@ -1,7 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
 import { Icon24ExternalLinkOutline } from "@vkontakte/icons";
 import { RouterLink } from "@vkontakte/vk-mini-apps-router";
-import { Button, Div, Group, Header, Link } from "@vkontakte/vkui";
+import {
+  Button,
+  Div,
+  Group,
+  Header,
+  Link,
+  Spinner,
+  Text,
+} from "@vkontakte/vkui";
 import { CommentsGroup } from "entities/comments";
 import { getNewsDetailsById } from "entities/news/api";
 import { mapTimeToDate } from "shared/mappers";
@@ -20,11 +28,12 @@ function NewsDetailsGroup({ id }: NewsDetailsGroupProps) {
   });
 
   if (isPending) {
-    return <p>Loading...</p>;
+    return <Spinner />;
   }
 
   if (error) {
-    return <p>{error.message}</p>;
+    console.error(error);
+    return <Text>Error while fetching news details</Text>;
   }
 
   if (!data) {

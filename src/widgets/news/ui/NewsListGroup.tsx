@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { Button, Div, Group } from "@vkontakte/vkui";
+import { Button, Div, Group, Spinner, Text } from "@vkontakte/vkui";
 import NewsPreviewCell from "entities/news/ui/NewsPreviewCell";
 import { InfiniteScrollPagination } from "shared/pagination";
 import { getAllRecentNews } from "../api";
@@ -13,11 +13,12 @@ function NewsListGroup() {
   });
 
   if (isPending) {
-    return <p>Loading...</p>;
+    return <Spinner />;
   }
 
   if (error) {
-    return <p>{error.message}</p>;
+    console.error(error);
+    return <Text>Error while fetching news list</Text>;
   }
 
   if (!data) {

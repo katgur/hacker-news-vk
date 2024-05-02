@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
 } from "@vkontakte/vk-mini-apps-router";
 import { AdaptivityProvider, AppRoot, ConfigProvider } from "@vkontakte/vkui";
+import { ErrorBoundary } from "shared/error";
 
 export const rootId = "default_root";
 export const viewId = "default_view";
@@ -34,15 +35,17 @@ interface AppConfigProps {
 
 function AppConfig({ children }: AppConfigProps) {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ConfigProvider>
-        <AdaptivityProvider>
-          <AppRoot>
-            <RouterProvider router={router}>{children}</RouterProvider>
-          </AppRoot>
-        </AdaptivityProvider>
-      </ConfigProvider>
-    </QueryClientProvider>
+    <ErrorBoundary>
+      <QueryClientProvider client={queryClient}>
+        <ConfigProvider>
+          <AdaptivityProvider>
+            <AppRoot>
+              <RouterProvider router={router}>{children}</RouterProvider>
+            </AppRoot>
+          </AdaptivityProvider>
+        </ConfigProvider>
+      </QueryClientProvider>
+    </ErrorBoundary>
   );
 }
 

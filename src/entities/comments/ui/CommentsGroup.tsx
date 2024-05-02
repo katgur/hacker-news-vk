@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Button, Group } from "@vkontakte/vkui";
+import { Button, Group, Spinner, Text } from "@vkontakte/vkui";
 import { Pagination } from "shared/pagination";
 import TextWithLabel from "shared/uikit/ui/TextWithLabel";
 import { getCommentById } from "../api";
@@ -18,11 +18,12 @@ function CommentsGroup({ id }: CommentProps) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   if (isPending) {
-    return <p>Loading...</p>;
+    return <Spinner />;
   }
 
   if (error) {
-    return <p>{error.message}</p>;
+    console.error(error);
+    return <Text>Error while fetching comment</Text>;
   }
 
   if (!data) {
