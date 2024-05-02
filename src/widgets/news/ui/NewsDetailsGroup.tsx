@@ -11,7 +11,7 @@ import {
   Text,
 } from "@vkontakte/vkui";
 import { CommentsGroup } from "entities/comments";
-import { getNewsDetailsById } from "entities/news/api";
+import { getNewsDetailsById } from "entities/news";
 import { mapTimeToDate } from "shared/mappers";
 import { InfiniteScrollPagination } from "shared/pagination";
 import { TitleCard } from "shared/uikit";

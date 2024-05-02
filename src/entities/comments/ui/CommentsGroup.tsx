@@ -5,11 +5,11 @@ import { Pagination } from "shared/pagination";
 import TextWithLabel from "shared/uikit/ui/TextWithLabel";
 import { getCommentById } from "../api";
 
-export interface CommentProps {
+export interface CommentsGroupProps {
   id: number;
 }
 
-function CommentsGroup({ id }: CommentProps) {
+function CommentsGroup({ id }: CommentsGroupProps) {
   const { isPending, error, data } = useQuery({
     queryKey: ["comment", id],
     queryFn: () => getCommentById(id),
